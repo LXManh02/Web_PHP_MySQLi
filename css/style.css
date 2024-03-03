@@ -1,0 +1,240 @@
+.wrapper {
+    height: auto;
+    width: 30%;
+}
+
+.wrapper_chitiet {
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.chitiet_sanpham {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.anhnen {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 620px;
+    width: 100%;
+}
+
+nav.navbar {
+    width: 100%;
+    height: 85px;
+    font-size: 16px;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+#main {
+    height: auto;
+    width: auto;
+}
+
+.maincontent {
+    height: auto;
+    width: 100%;
+    /* background-color: rgb(242, 244, 246); */
+    padding-top: 85px;
+}
+
+ul.product_list {
+    width: 80%;
+    list-style: none;
+    margin-left: 180px;
+    padding: 0;
+}
+
+ul.product_list li {
+    width: 22%;
+    margin: 17px;
+    float: left;
+    background-color: #f6f6f6;
+    height: 410px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    position: relative;
+}
+
+ul.product_list li:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul.product_list li a {
+    text-decoration: none;
+}
+
+ul.product_list li img {
+    height: 250px;
+    width: 100%;
+}
+
+p.title_product {
+    font-weight: bold;
+    color: #334862;
+}
+
+p.price_product {
+    font-weight: bold;
+    color: #111;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ebeaea;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.container:hover .overlay {
+    height: 10%;
+}
+
+.text {
+    white-space: nowrap;
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.clear {
+    clear: both;
+}
+
+.footer {
+    height: 150px;
+    width: 100%;
+}
+
+p.footer_copyright {
+    text-align: center;
+}
+
+
+/* jQuery Demo */
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+.arrow-steps .step {
+    font-size: 14px;
+    text-align: center;
+    color: #777;
+    cursor: default;
+    margin: 0 1px 0 0;
+    padding: 10px 0px 10px 0px;
+    width: 15%;
+    float: left;
+    position: relative;
+    background-color: #ddd;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.arrow-steps .step a {
+    color: #777;
+    text-decoration: none;
+}
+
+.arrow-steps .step:after,
+.arrow-steps .step:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #ddd;
+    z-index: 2;
+}
+
+.arrow-steps .step:before {
+    right: auto;
+    left: 0;
+    border-left: 17px solid #fff;
+    z-index: 0;
+}
+
+.arrow-steps .step:first-child:before {
+    border: none;
+}
+
+.arrow-steps .step:last-child:after {
+    border: none;
+}
+
+.arrow-steps .step:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.arrow-steps .step:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.arrow-steps .step span {
+    position: relative;
+}
+
+*.arrow-steps .step.done span:before {
+    opacity: 1;
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -10px;
+    font-size: 11px;
+    line-height: 21px;
+}
+
+.arrow-steps .step.current {
+    color: #fff;
+    background-color: rgb(0, 220, 0);
+}
+
+.arrow-steps .step.current a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.arrow-steps .step.current:after {
+    border-left: 17px solid rgb(0, 220, 0);
+}
+
+.arrow-steps .step.done {
+    color: #173352;
+    background-color: green;
+}
+
+.arrow-steps .step.done a {
+    color: #173352;
+    text-decoration: none;
+}
+
+.arrow-steps .step.done:after {
+    border-left: 17px solid green;
+}
