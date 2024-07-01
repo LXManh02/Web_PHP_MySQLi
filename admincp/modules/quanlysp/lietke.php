@@ -5,21 +5,21 @@
 ?>
 <style>
   tr.anh td img{
-    height:100px ;
-    width: 100%;
+    height:150px ;
+    width: 180px;
 
   }
 </style>
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
+        <th>STT</th>
         <th scope="col">Mã Sản Phẩm</th>
         <th scope="col">Tên Sản Phẩm</th>
         <th scope="col">Hình ảnh</th>
         <th scope="col">Giá sản phẩm</th>
         <th scope="col">Số lượng</th>
         <th scope="col">Danh mục</th>
-        <th scope="col">Tóm tắt</th>
+        <!-- <th scope="col">Tóm tắt</th> -->
         <th scope="col">Tình trạng</th>
         <th scope="col">Quản lý</th>
     </tr>
@@ -37,7 +37,7 @@
         <td><?php echo $row['giasp'] ?></td>
         <td><?php echo $row['soluong'] ?></td>
         <td><?php echo $row['tendanhmuc'] ?></td>
-        <td><?php echo $row['tomtat'] ?></td>
+        <!-- <td><?php echo $row['tomtat'] ?></td> -->
         <td><?php if ($row['tinhtrang']==1 ){
           echo 'Kích hoạt';
         }else {

@@ -1,72 +1,21 @@
-<h3>Lịch sử đơn hàng</h3>
-<?php
-	$id_khachhang = $_SESSION['id_khachhang'];
-	$sql_lietke_dh = "SELECT * FROM tbl_cart,tbl_dangky 
-  WHERE tbl_cart.id_khachhang=tbl_dangky.id_dangky 
-  AND tbl_cart.id_khachhang='$id_khachhang' ORDER BY tbl_cart.id_cart DESC";
-	$query_lietke_dh = mysqli_query($mysqli,$sql_lietke_dh);
+<?php 
+if(!isset($_SESSION['id_khachhang']) && !isset($_SESSION['cart'])){
+	header('Location:index.php');
+} 
 ?>
-<table style="width:100%" border="1" style="border-collapse: collapse;">
-  <tr>
-  	<th>STT</th>
-    <th>Mã đơn hàng</th>
-    <th>Tên khách hàng</th>
-    <th>Địa chỉ</th>
-    <th>Email</th>
-    <th>Số điện thoại</th>
-    <th>Tình trạng</th>
-    <th>Ngày đặt</th>
-  	<th>Quản lý</th>
-    <th>In</th>
-  	<th>Hình thức thanh toán</th>
-  </tr>
-  <?php
-  $i = 0;
-  while($row = mysqli_fetch_array($query_lietke_dh)){
-  	$i++;
+<h2>Chi tiết đơn hàng đã đặt</h2>
+<div class="container">
+	<?php
+  if(isset($_SESSION['id_khachhang'])){
   ?>
-  <tr>
-  	<td><?php echo $i ?></td>
-    <td><?php echo $row['code_cart'] ?></td>
-    <td><?php echo $row['tenkhachhang'] ?></td>
-    <td><?php echo $row['diachi'] ?></td>
-    <td><?php echo $row['email'] ?></td>
-    <td><?php echo $row['dienthoai'] ?></td>
-
-    <td>
-    	<?php if($row['cart_status']==1){
-    		echo '<a href="modules/quanlydonhang/xuly.php?code='.$row['code_cart'].'">Đơn hàng mới</a>';
-    	}else{
-    		echo 'Đã xem';
-    	}
-    	?>
-    </td>
-    <td><?php echo $row['cart_date'] ?></td>
-   	<td>
-   		<a href="index.php?quanly=xemdonhang&code=<?php echo $row['code_cart'] ?>">Xem đơn hàng</a> 
-   	</td>
-    <td>
-      <a href="main/indonhang.php?code=<?php echo $row['code_cart'] ?>">In Đơn hàng</a> 
-    </td>
-   	<td>
-   		<?php 
-   		if($row['cart_payment']=='vnpay' || $row['cart_payment']=='momo'){
-   		?>
-   		<a href="index.php?quanly=lichsudonhang&congthanhtoan=<?php echo $row['cart_payment'] ?>&code_cart=<?php echo $row['code_cart'] ?>"><?php echo $row['cart_payment'] ?></a>	
-   		<?php
-   		}else{ 
-   		?>
-   		<?php echo $row['cart_payment'] ?>
-   		<?php
-   		} 
-   		?>
-   		</td>
-  </tr>
-  <?php
-  } 
-  ?>
- 
-</table>
+  <!-- Responsive Arrow Progress Bar -->
+  <div class="arrow-steps clearfix">
+    <div class="step done"> <span> <a href="index.php?quanly=giohang" >Giỏ hàng</a></span> </div>
+    <div class="step done"> <span><a href="index.php?quanly=vanchuyen" >Vận chuyển</a></span> </div>
+    <div class="step done"> <span><a href="index.php?quanly=thanhtoandh" >Thanh toán</a><span> </div>
+    <div class="step current"> <span><a href="index.php?quanly=lichsudh" >Lịch sử đơn hàng</a><span> </div>
+  </div>
+ <?php }?>
 <?php
 if(isset($_GET['congthanhtoan'])){
 	$congthanhtoan = $_GET['congthanhtoan'];
@@ -77,7 +26,7 @@ if(isset($_GET['congthanhtoan'])){
 		$row_momo = mysqli_fetch_array($sql_momo);
 	?>
 
-	<table class="table table-striped">
+	<table class="table">
     <thead>
       <tr>
         <th>Partner_code</th>

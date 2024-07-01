@@ -97,7 +97,7 @@ if(isset($_GET['congthanhtoan'])){
 		$row_momo = mysqli_fetch_array($sql_momo);
 	?>
 
-	<table class="table table-striped">
+	<table class="table">
     <thead>
       <tr>
         <th>Partner_code</th>

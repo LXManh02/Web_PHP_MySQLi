@@ -135,23 +135,23 @@
   } 
   ?>
 </table>
-    <div style="margin-left:90px ; width: 300px;">
+    <div style="margin-left:80px ; width: 300px;">
         <div >
-        <div>
-            <div class="row d-flex  h-200">
-                <div class="col-9 col-md-7 col-lg-12 col-xl-12">
-                    <h2>Thông tin</h2>
+        <div >
+            <div class="row d-flex  h-100">
+                <div class="col-9 col-md-7 col-lg-12 col-xl-12" >
+                    <h2>THÔNG TIN </h2>
                     <form action="" method="POST">
-                        <div class="form-outline mb-0">
-                            <label class="form-label" for="form3Example1cg">Họ và Tên</label>
+                        <div class="form-outline mb-2">
+                            <label class="form-label" for="form3Example3cg">Họ và Tên</label>
                             <input type="text" name="ten" class="form-control" value="<?php echo $name ?>" placeholder="Nhập họ và tên"
                                 required />
                         </div>
-                        <div class="form-outline mb-0">
+                        <div class="form-outline mb-2">
                             <label class="form-label" for="form3Example3cg">Số điện thoại</label>
                             <input type="text" name="phone" class="form-control" value="<?php echo $phone ?>"placeholder="Nhập SĐT" required />
                         </div>
-                        <div class="form-outline mb-0">
+                        <div class="form-outline mb-2">
                             <label class="form-label" for="form3Example3cg">Địa Chỉ</label>
                             <input type="text" name="diachi" class="form-control"value="<?php echo $address ?>" placeholder="Nhập địa chỉ"
                                 required />
@@ -163,11 +163,11 @@
                         <?php
                             if($name=="" && $phone==""){
                         ?>
-                        <button type="submit" name="themvanchuyen" class="btn btn-primary">Thêm</button>
+                        <button type="submit" name="themvanchuyen" class="btn btn-primary"style="margin-bottom: 10px">Thêm</button>
                         <?php 
                             }elseif($name!="" && $phone!=""){
                         ?>
-                        <button type="submit" name="capnhatvanchuyen" class="btn btn-primary">Cập Nhật</button>
+                        <button type="submit" name="capnhatvanchuyen" class="btn btn-primary"style="margin-bottom: 10px" >Cập Nhật</button>
                         <?php
                         }
                         ?>

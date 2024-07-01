@@ -12,8 +12,8 @@
                 <div class="col-md-5"><img class="card-img-top mb-5 mb-md-0" src="../admincp/modules/quanlysp/uploads/<?php echo $row_chitiet['hinhanh'] ?>"/></div>
                 <div class="col-md-6">
                     <div class="small mb-1"><?php echo $row_chitiet['masp'] ?></div>
-                    <h2 class="display-5 fw-bolder"><?php echo $row_chitiet['tensp'] ?></h2>
-                    <div class="fs-5 mb-5">
+                    <h1 class="display-6 fw-bolder"><?php echo $row_chitiet['tensp'] ?></h1>
+                    <div class="fs-5 mb-5 fw-bolder text-success">
                         <span><?php echo number_format($row_chitiet['giasp'] ,0,',','.').' VNĐ' ?></span>
                     </div>
                     <p class="lead"><?php echo $row_chitiet['tomtat'] ?></p>
@@ -23,6 +23,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div style="width: 80%;margin-left: 150px;">
+        <p class="lead"><?php echo $row_chitiet['noidung'] ?></p>
         </div>
     </section>
 </form>

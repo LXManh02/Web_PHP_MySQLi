@@ -32,8 +32,8 @@ $secretKey = 'K951B6PE1waDMi640xX08PD3vg6EkVlz';
 $orderInfo = "Thanh toán qua mã QR MoMo";
 $amount = $_POST["tongtien_vnd"];
 $orderId = time() ."";
-$redirectUrl = "http://localhost/DATN/index.php?quanly=camon";
-$ipnUrl = "http://localhost/DATN/index.php?quanly=camon";
+$redirectUrl = "http://localhost/DATN/pages/index.php?quanly=camon";
+$ipnUrl = "http://localhost/DATN/pages/index.php?quanly=camon";
 $extraData = "";
 
 

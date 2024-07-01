@@ -28,7 +28,7 @@
       <td>Hình Ảnh</td>
       <td>  
         <input type="file" name="hinhanh" >
-        <img src="modules/quanlysp/uploads/<?php echo $row['hinhanh'] ?>">
+        <img src="modules/quanlysp/uploads/<?php echo $row['hinhanh'] ?> "width="200px" height="200px">
       </td>
     </tr>
     <tr>

@@ -75,6 +75,21 @@
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
+.backtop {
+    display: none; /* Ẩn nút mặc định */
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #9e9e9e;
+    color: #fff;
+    padding: 15px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 100;
+        }
+.backtop:hover{
+    color: green;
+}
 </style>
 <?php
     $sql_pro = "SELECT * FROM tbl_sanpham ,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc= tbl_danhmuc.id_danhmuc
@@ -135,7 +150,28 @@
                     ?>
     </ul>
     </div>
-<div style="clear:both"></div>
+    <div style="clear:both"></div>
+    <div class="backtop">
+    <i class="bi bi-caret-up-fill"></i>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            if($(this).scrollTop()){
+                $(".backtop").fadeIn();
+            } else {
+                $(".backtop").fadeOut();
+            }
+        });
+        $(".backtop").click(function(){
+            $('html, body').animate({
+                scrollTop: 0
+            }, 2);
+        });
+    });
+</script>
+
 <script>
 $(".hover").mouseleave(
     function() {

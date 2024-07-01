@@ -51,12 +51,12 @@
             </ul>
           </div>
           <div style="margin-left:600px;padding-top: 30px; ">
-            <form class="d-flex" action="index.php?quanly=timkiem" method="POST" " >
+            <form class="se d-flex" action="index.php?quanly=timkiem" method="POST" " >
               <input style=" padding: 10px 15px;border: none;outline: none; border-radius:30px 0px 0px 30px; "  type=" search" name="tukhoa" placeholder="Nhập từ khóa " aria-label="Search">
               <button style="padding: 10px 15px;border: none;outline: none; background-color: white; border-radius:0px 30px 30px 0px;" name="timkiem" type="submit"><i class="bi bi-search"></i> </button>
             </form>
           </div>
-          <div style="padding:15px 20px 0px 20px;">
+          <div class="user" style="padding:15px 20px 0px 20px;">
             <?php
             if (isset($_SESSION['dangky'])) {
             ?>
@@ -129,9 +129,14 @@
   </nav>
 </div>
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
+  
+  /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
+  .se:hover{
+    border: 1px solid;
+  box-shadow:0px 0px 5px 1px gray;
+  border-radius: 30px 30px;
+  }
   a:hover {
     color: #e9944f;
   }
