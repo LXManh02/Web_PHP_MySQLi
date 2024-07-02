@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <img class="anhnen" src="../images/anhnen2.png" alt="">
 <style>
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
@@ -76,17 +76,17 @@
     transition-delay: 0.2s;
 }
 .backtop {
-    display: none; /* Ẩn nút mặc định */
+    display: none;
     position: fixed;
-    bottom: 40px;
+    bottom: 90px;
     right: 20px;
     background-color: #9e9e9e;
     color: #fff;
-    padding: 15px;
-    border-radius: 40px;
+    padding: 10px 14px 10px 14px;
+    border-radius: 50%;
     cursor: pointer;
     z-index: 100;
-        }
+}
 .backtop:hover{
     color: green;
 }
@@ -152,9 +152,11 @@
     </div>
     <div style="clear:both"></div>
     <div class="backtop">
-    <i class="bi bi-caret-up-fill"></i>
+    <i class="fa-solid fa-angle-up " style="font-size:33px;"></i>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
+<!-- backtop -->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
         $(window).scroll(function(){
@@ -172,6 +174,16 @@
     });
 </script>
 
+<!-- chatbot -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Chatbottest"
+  agent-id="e9669881-86ab-4ee9-b0a1-c89e94f6fa66"
+  language-code="vi"
+></df-messenger>
+
+<!-- hover ảnh sp -->
 <script>
 $(".hover").mouseleave(
     function() {

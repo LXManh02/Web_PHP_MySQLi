@@ -218,7 +218,7 @@
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
             <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
-         <a href="https://www.facebook.com/profile.php?id=100006186047923">Lê Xuân Mạnh</a>.
+         <a href="https://www.facebook.com/profile.php?id=100006186047923" target="_blank">Lê Xuân Mạnh</a>.
             </p>
           </div>
 
